@@ -1,0 +1,99 @@
+{
+  "proposal": {
+    "name": "Aggressive Liquidity Mining Renewal",
+    "category": "treasury",
+    "summary": "Boost emissions for rapid TVL growth before a major listing campaign.",
+    "treasury_request_pct": 0.18,
+    "expected_upside": 0.32,
+    "execution_risk": 0.58,
+    "decentralization_impact": -0.2,
+    "urgency": 0.72,
+    "proposer_reputation": 0.05
+  },
+  "environment": {
+    "label": "Whale Raid",
+    "market_volatility": 0.24,
+    "negative_shock_probability": 0.26,
+    "whale_coordination": 0.86,
+    "voter_apathy": 0.34,
+    "social_sentiment": -0.06,
+    "manipulation_pressure": 0.78,
+    "noise_scale": 0.18
+  },
+  "market_context": {},
+  "run_count": 400,
+  "seed": 42,
+  "summaries": [
+    {
+      "mechanism": "quadratic",
+      "label": "Quadratic Voting",
+      "pass_rate": 0.0025,
+      "avg_turnout": 0.7715075757575758,
+      "avg_yes_share": 0.18106029142226343,
+      "quorum_failure_rate": 0.0,
+      "false_positive_rate": 0.0025,
+      "false_negative_rate": 0.0,
+      "decisive_whale_rate": 0.0025,
+      "whale_capture_rate": 0.0025,
+      "avg_top3_yes_concentration": 0.5713441809835981,
+      "shock_flip_delta": 0.003367003367003367,
+      "legitimacy_gap": 0.0366839335292586,
+      "resilience_score": 99.82479797979798
+    },
+    {
+      "mechanism": "shielded_hybrid",
+      "label": "Shielded Hybrid",
+      "pass_rate": 0.0,
+      "avg_turnout": 0.7715075757575758,
+      "avg_yes_share": 0.20679045990783146,
+      "quorum_failure_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "decisive_whale_rate": 0.01,
+      "whale_capture_rate": 0.0,
+      "avg_top3_yes_concentration": 0.588946393376183,
+      "shock_flip_delta": 0.0,
+      "legitimacy_gap": 0.06260682592948098,
+      "resilience_score": 99.82
+    },
+    {
+      "mechanism": "token_weighted",
+      "label": "Token Weighted",
+      "pass_rate": 0.0775,
+      "avg_turnout": 0.7715075757575758,
+      "avg_yes_share": 0.22891832066199683,
+      "quorum_failure_rate": 0.0,
+      "false_positive_rate": 0.0775,
+      "false_negative_rate": 0.0,
+      "decisive_whale_rate": 0.075,
+      "whale_capture_rate": 0.0775,
+      "avg_top3_yes_concentration": 0.596806381481796,
+      "shock_flip_delta": 0.02592265699061816,
+      "legitimacy_gap": 0.08473468668364635,
+      "resilience_score": 95.0844640580563
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "title": "Whale Capture Surface",
+      "severity": "medium",
+      "mechanism": "Token Weighted",
+      "evidence": "Token Weighted shows whale-driven passage in 7.8% of runs, with decisive whale votes in 7.5%.",
+      "recommendation": "Cap per-wallet influence, add a participant approval floor, or review proposals under a quadratic or hybrid path before execution."
+    },
+    {
+      "title": "Toxic Proposal Passage Risk",
+      "severity": "medium",
+      "mechanism": "Token Weighted",
+      "evidence": "Token Weighted passes proposals with negative public benefit in 7.8% of runs.",
+      "recommendation": "Route treasury-heavy or centralizing proposals through a guarded mechanism or require a second-stage review before execution."
+    },
+    {
+      "title": "Mechanism Design Mismatch",
+      "severity": "medium",
+      "mechanism": null,
+      "evidence": "Pass rates diverge by 7.8% across mechanisms. Quadratic Voting is materially more resilient than Token Weighted for this proposal profile.",
+      "recommendation": "Use the tunnel as a pre-flight check and route risky proposals to the mechanism that minimizes false positives and capture risk."
+    }
+  ]
+}

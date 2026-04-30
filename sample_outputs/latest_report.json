@@ -1,0 +1,94 @@
+{
+  "proposal": {
+    "name": "激进流动性挖矿续期",
+    "category": "treasury",
+    "summary": "在重大上币营销前，提高排放速度来快速拉升 TVL。",
+    "treasury_request_pct": 0.18,
+    "expected_upside": 0.32,
+    "execution_risk": 0.58,
+    "decentralization_impact": -0.2,
+    "urgency": 0.72,
+    "proposer_reputation": 0.05
+  },
+  "environment": {
+    "label": "平稳扩张 + HTX Calibration",
+    "market_volatility": 0.118,
+    "negative_shock_probability": 0.12,
+    "whale_coordination": 0.42,
+    "voter_apathy": 0.22,
+    "social_sentiment": 0.12,
+    "manipulation_pressure": 0.28,
+    "noise_scale": 0.12
+  },
+  "market_context": {
+    "source": "synthetic",
+    "note": "No HTX endpoint configured. Using built-in market stress placeholder.",
+    "price_change_24h": -0.032,
+    "volume_change_24h": 0.14,
+    "volatility_multiplier": 1.18,
+    "sentiment_shift": -0.06,
+    "shock_probability_shift": 0.04,
+    "raw_payload": {}
+  },
+  "run_count": 600,
+  "seed": 42,
+  "summaries": [
+    {
+      "mechanism": "quadratic",
+      "label": "Quadratic Voting",
+      "pass_rate": 0.0,
+      "avg_turnout": 0.8195454545454546,
+      "avg_yes_share": 0.1677948814411689,
+      "quorum_failure_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "decisive_whale_rate": 0.0,
+      "whale_capture_rate": 0.0,
+      "avg_top3_yes_concentration": 0.6913209625622366,
+      "shock_flip_delta": 0.0,
+      "legitimacy_gap": 0.02448391967099709,
+      "resilience_score": 100.0
+    },
+    {
+      "mechanism": "shielded_hybrid",
+      "label": "Shielded Hybrid",
+      "pass_rate": 0.0,
+      "avg_turnout": 0.8195454545454546,
+      "avg_yes_share": 0.19033607922243684,
+      "quorum_failure_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "decisive_whale_rate": 0.0,
+      "whale_capture_rate": 0.0,
+      "avg_top3_yes_concentration": 0.7078029946479288,
+      "shock_flip_delta": 0.0,
+      "legitimacy_gap": 0.048624135590536875,
+      "resilience_score": 100.0
+    },
+    {
+      "mechanism": "token_weighted",
+      "label": "Token Weighted",
+      "pass_rate": 0.0,
+      "avg_turnout": 0.8195454545454546,
+      "avg_yes_share": 0.1993154742753435,
+      "quorum_failure_rate": 0.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "decisive_whale_rate": 0.0,
+      "whale_capture_rate": 0.0,
+      "avg_top3_yes_concentration": 0.7104189408521665,
+      "shock_flip_delta": 0.0,
+      "legitimacy_gap": 0.05758642293570009,
+      "resilience_score": 100.0
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "title": "No Acute Governance Failure Mode",
+      "severity": "low",
+      "mechanism": null,
+      "evidence": "Across the simulated mechanisms, no single risk signal crossed the alert threshold for this proposal and environment mix.",
+      "recommendation": "Keep monitoring turnout and whale concentration, but the current configuration appears reasonably stable for an MVP demo."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+numpy>=1.26
+pandas>=2.2
+streamlit>=1.44
+plotly>=6.0
+pydantic>=2.7
+httpx>=0.28
+python-dotenv>=1.0
+fastapi>=0.115
